@@ -2,7 +2,9 @@
 Tool for testing RabbitMQ instance.
 
 # Program Arguments
+```
 queue-name "rabbit-mq-instance-url" "message-to-send-receive"
+```
 
 # Output
 ```

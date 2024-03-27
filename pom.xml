@@ -5,6 +5,14 @@
 	<artifactId>rabbitmq-tester</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
+	<distributionManagement>
+	   <repository>
+	     <id>github</id>
+	     <name>GitHub conorheffron Apache Maven Packages</name>
+	     <url>https://maven.pkg.github.com/conorheffron/rabbitmq-tester</url>
+	   </repository>
+	</distributionManagement>
+
 	<dependencies>
 		<dependency>
 			<groupId>com.rabbitmq</groupId>

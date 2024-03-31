@@ -1,5 +1,5 @@
 # rabbitmq-tester
-Tool for testing RabbitMQ instance.
+Tool for testing RabbitMQ instance with sample publisher and consumer of text messages.
 
 # Program Arguments
 ```

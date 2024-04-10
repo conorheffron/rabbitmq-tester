@@ -14,4 +14,4 @@ Java Queue - Message Received 'message-to-send-receive'
 ```
 
 ## Technologies 
-JDK 8 and Rabbit-MQ 5.18
+JDK 8 and Rabbit-MQ 5

@@ -13,4 +13,5 @@ Java Queue - Message RabbitMQ Java Sent: 'message-to-send-receive'
 Java Queue - Message Received 'message-to-send-receive'
 ```
 
-## Technologies Used : JDK 1.8.0_42, Spring 3.1.1, Tomcat 7.0 and Maven 4.7
+## Technologies 
+JDK 8 and 

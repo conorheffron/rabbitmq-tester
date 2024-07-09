@@ -9,4 +9,4 @@
 
 ## Reporting a Vulnerability
 
-Please submit issues [here](https://github.com/conorheffron/rabbitmq-tester/issues)
+Please submit issues [here](https://github.com/conorheffron/rabbitmq-tester/issues) or contact conorheffron directly.

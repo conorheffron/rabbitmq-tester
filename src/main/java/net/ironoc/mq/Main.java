@@ -11,8 +11,11 @@ public class Main {
 
 	public static void main(String[] args) {
 		String queueName = args[0];
+        System.out.println(String.format("Queue name is %s", queueName));
 		String uriStr = args[1];
+        System.out.println(String.format("Connection URI is %s", uriStr));
 		String message = args[2];
+        System.out.println(String.format("Message Content is %s", message));
 		
 		Config config = new Config();
         URI uri = URI.create(uriStr);

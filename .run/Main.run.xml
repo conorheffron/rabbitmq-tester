@@ -2,7 +2,7 @@
   <configuration default="false" name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
     <option name="MAIN_CLASS_NAME" value="net.ironoc.mq.Main" />
     <module name="rabbitmq-tester" />
-    <option name="PROGRAM_PARAMETERS" value="net.ironoc.mq.test2 &quot;amqp://localhost&quot; &quot;Hello There&quot;" />
+    <option name="PROGRAM_PARAMETERS" value="net.ironoc.mq.test3 &quot;amqp://localhost&quot; &quot;Hello There&quot;" />
     <extension name="coverage">
       <pattern>
         <option name="PATTERN" value="com.ironoc.mq.*" />

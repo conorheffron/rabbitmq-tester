@@ -1,4 +1,4 @@
-package com.ironoc.mq.app;
+package net.ironoc.mq.app;
 
 import java.io.IOException;
 
@@ -35,5 +35,4 @@ public class MessageConsumer {
 			e.printStackTrace();
 		}
 	}
-
 }

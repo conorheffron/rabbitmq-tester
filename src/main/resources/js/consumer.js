@@ -4,7 +4,7 @@ async function receiveMessage() {
     const connection = await amqp.connect('amqp://localhost');
     const channel = await connection.createChannel();
 
-    const queue = 'hello';
+    const queue = 'net.ironoc.mq.test3';
     await channel.assertQueue(queue, { durable: false });
 
     console.log(`Waiting for messages in ${queue}. To exit press CTRL+C`);

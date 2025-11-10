@@ -5,7 +5,7 @@ async function sendMessage() {
     const channel = await connection.createChannel();
     
     const queue = 'net.ironoc.mq.test3';
-    const message = 'Hello, RabbitMQ! from JS script';
+    const message = 'Hello, RabbitMQ! from JS script again!';
 
     await channel.assertQueue(queue, { durable: false });
     channel.sendToQueue(queue, Buffer.from(message));

@@ -10,7 +10,15 @@
 	
 	<groupId>rabbitmq-tester</groupId>
 	<artifactId>rabbitmq-pub-cons-tester</artifactId>
-	<version>3.0.0-RELEASE</version>
+	<version>3.0.1-RELEASE</version>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub conorheffron Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/conorheffron/rabbitmq-tester</url>
+        </repository>
+    </distributionManagement>
 	
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

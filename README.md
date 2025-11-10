@@ -1,3 +1,5 @@
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 [![Java CI with Maven](https://github.com/conorheffron/rabbitmq-tester/actions/workflows/maven.yml/badge.svg)](https://github.com/conorheffron/rabbitmq-tester/actions/workflows/maven.yml)
 
 ![Proof HTML](https://github.com/conorheffron/rabbitmq-tester/actions/workflows/proof-html.yml/badge.svg)
@@ -58,12 +60,17 @@ http://localhost:15672/
 ##### Run Consumer
 ```shell
 cd src/main/resources/js
+
+npm install amqplib
+
+
 node consumer.js
 ```
 
 #### Run Producer
 ```shell
 cd src/main/resources/js
+
 node producer.js
 ```
 

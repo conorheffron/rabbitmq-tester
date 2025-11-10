@@ -1,4 +1,4 @@
-package com.ironoc.mq.app;
+package net.ironoc.mq.app;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
@@ -21,5 +21,4 @@ public class Producer {
 			e.printStackTrace();
 		}
 	}
-
 }

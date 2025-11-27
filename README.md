@@ -60,17 +60,19 @@ http://localhost:15672/
 ##### Run Consumer
 ```shell
 cd src/main/resources/js
-
+```
+```shell
 npm install amqplib
-
-
+```
+```shell
 node consumer.js
 ```
 
 #### Run Producer
 ```shell
 cd src/main/resources/js
-
+```
+```shell
 node producer.js
 ```
 

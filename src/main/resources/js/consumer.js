@@ -15,4 +15,3 @@ async function receiveMessage() {
 }
 
 receiveMessage().catch(console.error);
-

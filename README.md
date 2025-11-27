@@ -15,7 +15,7 @@ queue-name "rabbit-mq-instance-url" "message-to-send-receive"
 ```
 
 ## Technologies 
- - JDK 17 and Rabbit-MQ 5
+ - JDK 17, Spring Boot 4, & Rabbit-MQ 5
 
 ---
 

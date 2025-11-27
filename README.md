@@ -15,7 +15,7 @@ queue-name "rabbit-mq-instance-url" "message-to-send-receive"
 ```
 
 ## Technologies 
- - JDK 17 and Rabbit-MQ 5
+ - JDK 17, Spring Boot 4, RabbitMQ Client 5, & RabbitMQ Instance 3
 
 ---
 
@@ -33,7 +33,7 @@ docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management
 
 #### Run Main Process
 ```shell
-java -jar target/rabbitmq-pub-cons-tester-2.6.5-RELEASE.jar \
+java -jar target/rabbitmq-pub-cons-tester-3.0.3-RELEASE.jar \
   net.ironoc.mq.test3 "amqp://localhost" "Hello There"
 ```
 
@@ -60,17 +60,19 @@ http://localhost:15672/
 ##### Run Consumer
 ```shell
 cd src/main/resources/js
-
+```
+```shell
 npm install amqplib
-
-
+```
+```shell
 node consumer.js
 ```
 
 #### Run Producer
 ```shell
 cd src/main/resources/js
-
+```
+```shell
 node producer.js
 ```
 

@@ -33,18 +33,19 @@ docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management
 
 #### Run Main Process
 ```shell
-java -jar target/rabbitmq-pub-cons-tester-3.0.3-RELEASE.jar \
+java -jar target/rabbitmq-pub-cons-tester-3.0.4-RELEASE.jar \
   net.ironoc.mq.test3 "amqp://localhost" "Hello There"
 ```
 
 ##### Console Out
 ```shell
-Queue name is net.ironoc.mq.test3
-Connection URI is amqp://localhost
-Message Content is Hello There
-Java Queue - Message RabbitMQ Java Sent: 'Hello There'
-{N|T} Waiting for messages.
-Java Queue - Message Received 'Hello There'
+15:46:06.181 [main] INFO net.ironoc.mq.Main -- Queue name is net.ironoc.mq.test3
+15:46:06.188 [main] INFO net.ironoc.mq.Main -- Connection URI is amqp://localhost
+15:46:06.188 [main] INFO net.ironoc.mq.Main -- Message Content is Hello There
+15:46:06.374 [main] INFO net.ironoc.mq.app.Producer -- Java Queue - Message RabbitMQ Java Sent: 'Hello There'
+15:46:06.406 [main] INFO net.ironoc.mq.app.MessageConsumer -- {N|T} Waiting for messages.
+15:46:06.413 [pool-3-thread-4] INFO net.ironoc.mq.app.MessageConsumer -- Java Queue - Message Received 'Hello There'
+15:46:10.916 [pool-3-thread-5] INFO net.ironoc.mq.app.MessageConsumer -- Java Queue - Message Received 'Hello, RabbitMQ! from JS script again!'
 ```
 
 #### Login as guest:guest to verify RabbitMQ instance

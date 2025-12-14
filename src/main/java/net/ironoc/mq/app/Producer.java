@@ -2,8 +2,12 @@ package net.ironoc.mq.app;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Producer {
+
+	private static final Logger logger = LoggerFactory.getLogger(Producer.class);
 	
 	public void publish(String message, String queueName, Connection connection) {
 		try {
@@ -14,11 +18,11 @@ public class Producer {
 			// publishing the message (bytes)
 			channel.basicPublish("", queueName, null, message.getBytes());
 	
-			System.out.println("Java Queue - Message RabbitMQ Java Sent: '" + message + "'");
+			logger.info("Java Queue - Message RabbitMQ Java Sent: '" + message + "'");
 	
 			channel.close();
 		} catch (Exception e) {
-			e.printStackTrace();
+			logger.error("Unexpected error occurred publishing message to MQ instance", e);
 		}
 	}
 }

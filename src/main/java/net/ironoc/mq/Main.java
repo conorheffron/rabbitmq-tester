@@ -4,18 +4,22 @@ import net.ironoc.mq.app.Config;
 import net.ironoc.mq.app.MessageConsumer;
 import net.ironoc.mq.app.Producer;
 import com.rabbitmq.client.Connection;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.net.URI;
 
 public class Main {
 
+	private static final Logger logger = LoggerFactory.getLogger(Main.class);
+
 	public static void main(String[] args) {
 		String queueName = args[0];
-        System.out.println(String.format("Queue name is %s", queueName));
+        logger.info("Queue name is {}", queueName);
 		String uriStr = args[1];
-        System.out.println(String.format("Connection URI is %s", uriStr));
+        logger.info("Connection URI is {}", uriStr);
 		String message = args[2];
-        System.out.println(String.format("Message Content is %s", message));
+        logger.info("Message Content is {}", message);
 		
 		Config config = new Config();
         URI uri = URI.create(uriStr);
@@ -26,12 +30,11 @@ public class Main {
 		
 		MessageConsumer consumer = new MessageConsumer();
 		Connection consumerConnection = config.getConnection(uri);
-		consumer.consume(queueName, consumerConnection);
-
 		try {
 			producerConnection.close();
+			consumer.consume(queueName, consumerConnection);
 		} catch (Exception e) {
-			e.printStackTrace();
+			logger.error("Unexpected error occurred closing producer connection to MQ instance", e);
 		}
 	}
 }

@@ -33,7 +33,7 @@ docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management
 
 #### Run Main Process
 ```shell
-java -jar target/rabbitmq-pub-cons-tester-3.0.4-RELEASE.jar \
+java -jar target/rabbitmq-pub-cons-tester-3.0.5-RELEASE.jar \
   net.ironoc.mq.test3 "amqp://localhost" "Hello There"
 ```
 

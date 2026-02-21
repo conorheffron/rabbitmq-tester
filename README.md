@@ -17,6 +17,81 @@ queue-name "rabbit-mq-instance-url" "message-to-send-receive"
 ## Technologies 
  - JDK 17, Spring Boot 4, RabbitMQ Client 5, & RabbitMQ Instance 3
 
+## Project Structure
+```shell
+src
+├── integration-test
+│   └── java
+│       └── com.ironoc.db.controller
+│           ├── CustomErrorControllerIntegrationTest.java
+│           └── PersonControllerIntegrationTest.java
+├── main
+│   ├── java
+│   │   └── com
+│   │       └── ironoc
+│   │           └── db
+│   │               ├── App.java
+│   │               ├── config
+│   │               │   └── IronocDbConfig.java
+│   │               ├── controller
+│   │               │   ├── CustomErrorController.java
+│   │               │   ├── PersonController.java
+│   │               │   └── VersionController.java
+│   │               ├── dao
+│   │               │   └── PersonDao.java
+│   │               ├── enums
+│   │               │   └── DataSourceKey.java
+│   │               ├── model
+│   │               │   ├── Employer.java
+│   │               │   └── Person.java
+│   │               └── service
+│   │                   ├── GoogleCloudClient.java
+│   │                   ├── GoogleCloudClientImpl.java
+│   │                   ├── PersonService.java
+│   │                   └── PersonServiceImpl.java
+│   ├── META-INF
+│   │   └── MANIFEST.MF
+│   └── resources
+│       ├── application-h2.properties
+│       ├── application.properties
+│       ├── db
+│       │   ├── data-h2.sql
+│       │   ├── data-mysql.sql
+│       │   └── ddl.sql
+│       ├── log4j.xml
+│       ├── static
+│       │   ├── favicon.ico
+│       │   ├── img
+│       │   │   └── robot-logo.png
+│       │   ├── ironoc-db-banner.txt
+│       │   └── style
+│       │       └── main.css
+│       └── templates
+│           ├── add-employee.html
+│           ├── edit-person.html
+│           ├── employee-list.html
+│           ├── error404.html
+│           ├── index.html
+│           └── navbar.html
+└── test
+    ├── java
+    │   └── com
+    │       └── ironoc
+    │           └── db
+    │               ├── AppTest.java
+    │               ├── config
+    │               │   └── IronocDbConfigTest.java
+    │               ├── controller
+    │               │   ├── CustomErrorControllerTest.java
+    │               │   ├── PersonControllerTest.java
+    │               │   └── VersionControllerTest.java
+    │               └── service
+    │                   ├── GoogleCloudClientServiceTest.java
+    │                   └── PersonServiceTest.java
+    └── resources
+        └── application.properties
+```
+
 ---
 
 ### Quick Start
